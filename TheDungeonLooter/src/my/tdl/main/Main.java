@@ -5,6 +5,7 @@ import java.awt.GraphicsEnvironment;
 
 import my.project.gop.main.GameWindow;
 import my.project.gop.main.SpriteSheet;
+import my.tdl.MovableObjects.Player;
 import my.tdl.gameloop.GameLoop;
 
 public class Main {
@@ -19,6 +20,7 @@ public class Main {
 		
 		GameWindow frame = new GameWindow("TheDlooter", width ,height);
 		frame.setFullscreen(1);
+		frame.addKeyListener(new Player());
 		frame.add(new GameLoop(width,height));
 		frame.setVisible(true);
 

@@ -5,12 +5,14 @@ import java.awt.image.BufferedImage;
 
 import my.project.gop.main.Vector2F;
 import my.project.gop.main.loadImageFrom;
+import my.tdl.MovableObjects.Player;
 import my.tdl.generator.Block.BlockType;
 import my.tdl.main.Main;
 
 public class Map {
 
 	TileManager tiles = new TileManager();
+	Player player = new Player();
 
 	public Map() {
 
@@ -18,6 +20,8 @@ public class Map {
 
 	public void init() {
 
+		player.init();
+		
 		BufferedImage map = null;
 
 		try {
@@ -47,11 +51,13 @@ public class Map {
 
 	public void tick(double deltaTime) {
 		tiles.tick(deltaTime);
+		player.tick(deltaTime);
 
 	}
 
 	public void render(Graphics2D g) {
 		tiles.render(g);
+		player.render(g);
 
 	}
 

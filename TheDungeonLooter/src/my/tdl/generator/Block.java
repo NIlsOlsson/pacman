@@ -43,7 +43,7 @@ public class Block extends Rectangle{
 	
 	public void render(Graphics2D g){
 		//g.drawRect((int)pos.getWorldLocation().xpos, (int)pos.getWorldLocation().xpos, BlockSize, BlockSize);
-		g.drawImage(block, (int)pos.getWorldLocation().xpos, (int)pos.getWorldLocation().xpos, BlockSize, BlockSize, null);
+		g.drawImage(block, (int)pos.getWorldLocation().xpos, (int)pos.getWorldLocation().ypos, BlockSize, BlockSize, null);
 	}
 	
 	
